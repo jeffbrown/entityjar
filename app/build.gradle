@@ -12,7 +12,7 @@ buildscript {
 
 version "0.1"
 group "app"
-
+apply plugin: 'project-reports'
 apply plugin:"eclipse"
 apply plugin:"idea"
 apply plugin:"war"
@@ -59,6 +59,8 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:2.47.1"
+
+    compile project(':entities')
 }
 
 bootRun {
